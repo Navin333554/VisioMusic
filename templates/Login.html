@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - AI Music Player</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+    <div class="login-container">
+        <h1>AI Facial Recognition Music Player</h1>
+        <p>Please log in to continue</p>
+        
+        <form action="/login" method="POST">
+            <div class="input-group">
+                <input type="text" id="username" name="username" placeholder="Username" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            
+            {% if error %}
+                <p class="error-message">{{ error }}</p>
+            {% endif %}
+            
+            <button type="submit" class="cta-button">Login</button>
+        </form>
+        <div class="login-hint">
+            <p><small>Hint: Use username 'user' and password 'password123'</small></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+# Ignore the virtual environment folder
+moodtune-env/
+venv/
+env/
+
+# Ignore Python cache files (temporary junk)
+__pycache__/
+*.pyc
+
+# Ignore VS Code settings (optional)
+.vscode/
+
+# Ignore system files
+Thumbs.db
